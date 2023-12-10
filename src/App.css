@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .month-selector {
+    display: flex;
+    justify-content: space-between;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .month-item {
+    cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .day-selector {
+    display: flex;
+    flex-direction: column; 
   }
-}
+  
+  .day-names,
+  .date-numbers {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .day-names div,
+  .date-numbers div {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .date-numbers div {
+    cursor: pointer;
+  }
+  
+
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    margin-top: 10px;
+  }
+  
+  .hour {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    border-right: 1px solid #ccc;
+  }
+  
+  
+  .timeline {
+    display: flex;
+  }
+  
+  .time-button{
+    margin: 10px;
+  }
+
+ .task-form{
+    padding: 20px;
+ }
+
+ .form{
+    margin: 10px;
+ }
+
+ .card-header{
+    margin: 15px;
+ }
+
+ @media (max-width: 800px) {
+    .month-selector {
+      display: none; /* Stack months vertically on smaller screens */
+    }
+  
+    .month-item {
+      display: none; /* Add space between month items */
+    }
+  
+    .day-names div,
+    .date-numbers div {
+      display: none; /* Make day names and date numbers take full width */
+    }
+  
+    .timeline,
+    .time-button {
+      display: none; /* Show timeline and time button on smaller screens */
+    }
+  }
